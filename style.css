@@ -1,0 +1,497 @@
+*{
+  margin: 0;
+  padding: 0;
+    
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: #e7e7e7;
+    min-height:100vh;
+    line-height: 1.5;
+
+}
+.img{
+    position: absolute;
+    top:0;
+    right:0;
+    opacity:0.5;
+    z-index:-1;
+}
+.layer-blur{
+    height:0;
+    width: 300px;
+    position: absolute;
+    top:20%;
+    right:0;
+    box-shadow: 0 0 700px 15px white;
+    rotate:-30deg;
+    z-index:-1;
+
+}
+.containr{
+    margin:0 auto;
+    padding:0 20px;
+    position: relative;
+    overflow: hidden;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    z-index:1001;
+    position: fixed;
+    
+}
+header h1{
+    margin:0;
+    font-size:60px;
+    font-weight: 300;
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    gap:60px;
+    margin-right: -90%;
+}
+nav a{
+    font-size:20px;
+    letter-spacing: 2px;
+    transition:0.2s;
+    text-decoration: none;
+    color: inherit;
+    z-index: 1001;
+    
+}
+nav a:hover{
+    color:#5300a0;
+}
+
+
+
+
+
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span{
+    width: 30px;
+    height: 3px;
+    background:#5300a0;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 10px);
+}
+.content{
+    max-width: 500px;
+    margin-left: 10%;
+    z-index: 999;
+}
+.tag-box{
+    margin-top: 20px;
+    position: relative;
+    width: 300px;
+    height: 50px;
+    border-radius: 50px;
+    background: linear-gradient(to right,#656565,#7f42a7,#6600c5,
+    #5300a0,#757575,#656565);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+@keyframes animationGradient{
+    to{
+        background-position: 200%;
+    }
+}
+.tag-box .tag a{
+    position: absolute;
+    inset:3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: aliceblue;
+}
+.tag-box .tag a:hover{
+    color:#5300a0;
+}
+.content h1{
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin:20px 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgb(128,128,0.4);
+
+}
+.discripiton{
+    font-size:20px;
+    letter-spacing: 2px;
+    max-width:500px;
+    color:gray;
+
+}
+
+
+.robot{
+    position: absolute;
+    top:0;
+    right: -25%;
+}
+
+
+
+
+
+/* From Uiverse.io by dylanharriscameron */ 
+.h1{
+    text-align: center;
+    
+}
+.h1 span{
+    font-size: 40px;
+    color: #5300a0;
+}
+.cards{
+    display:flex;
+    padding:20px 200px;
+    justify-content: space-between;
+    text-align: center;
+}
+.bg p{
+    padding: 10px 0;
+}
+.bg h1{
+    color: #5300a0;
+}
+.bg a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: #bebebe;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.bg a:hover{
+    background-color: #5300a0;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  border-radius: 14px;
+  z-index:1000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px #bebebe;
+  ;
+}
+
+.bg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 190px;
+  height: 240px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(24px);
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid white;
+}
+
+.blob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color:#5300a0;
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+
+
+
+/* From Uiverse.io by gharsh11032000 */ 
+.form-container {
+  width: 500px;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+.tag-form{
+    text-align: center;
+}
+.tag-form span{
+    color: #5300a0;
+    font-size: 40px;
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input {
+  width: 90%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color:transparent;
+  border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+  width: 90%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #717171;
+  font-weight: 600;
+  width: 40%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+
+
+footer hr{
+   margin-top: 50px;
+}
+footer{
+    height: 200px;
+}
+footer table{
+    margin: 20px auto;
+    text-align: center;
+    width: 50%;
+}
+table th{
+    font-size: 20px;
+}
+.p{
+    text-align: center;
+}
+table img:hover{
+    width: 36px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:1300px) {
+    header{
+        padding: 1rem 0.5rem;
+    }
+    nav{
+        margin-right:-40%;
+    }
+    .content{
+        margin-top: 85%;
+    }
+    .robot{
+        scale: 0.8;
+        top: -20%;
+        right: 2%;
+    }
+}
+@media (max-width:920px) {
+    header{
+        padding: 1rem 0.1rem;
+    }
+
+    nav{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left:60%;
+        background:#5300a0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 30px;
+        padding: 20px 0;
+        
+    }
+    nav a:hover{
+    color:#001049;
+}
+        nav.active{
+        display: flex;
+    }
+
+    .menu-toggle{
+        display: flex;
+        margin-left:80%;
+    }
+
+    header h1{
+        font-size: 2rem;
+    }
+
+    .content{
+        margin-top: 25rem;
+        max-width: 30rem;
+        margin-left: 10%;
+    }
+    .robot{
+        scale: 0.5;
+        top: -25%;
+        right: 0;
+    }
+    .tag-box{
+        width: 12rem;
+    }
+    .content h1{
+        font-size: 2.5rem;
+    }
+    .discripiton{
+        font-size: 1rem;
+
+    }
+
+    .cards{
+        display:block;
+        padding: 0;
+        
+    }
+    .card{
+        margin:0 auto;
+        margin-top: 10px;
+    }
+    .form-container{
+        width:300px;
+    }
+}
+
+
+
+
